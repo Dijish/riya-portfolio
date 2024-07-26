@@ -1,0 +1,24 @@
+@import "../../styles/variable.scss";
+
+.cta {
+    width: max-content;
+    border-bottom: 5px solid transparent;
+
+  > a,
+  > button {
+    font-family: $secondary-font;
+    font-weight: bold;
+    font-size: 30px;
+    letter-spacing: 5px;
+    cursor: pointer;
+  }
+
+  &:hover {
+    border-bottom: 5px solid $primary-color;
+  }
+
+  button {
+    background: none;
+    border: none;
+  }
+}

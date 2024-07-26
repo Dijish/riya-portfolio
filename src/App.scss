@@ -1,0 +1,27 @@
+// Googe Font: Raleway
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+// Icon Font: Icomoon
+@import './assets/icons/style.css';
+
+@import "./styles/variable.scss";
+@import "node_modules/normalize-scss/sass/normalize";
+@include normalize();
+
+ul,
+h2,
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+body {
+  font-family: $primary-font;
+  background-color: $primary-bg;
+  color: $primary-color;
+}

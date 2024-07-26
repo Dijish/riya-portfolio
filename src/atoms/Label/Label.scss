@@ -1,0 +1,11 @@
+@import "../../styles/variable.scss";
+
+.label {
+    color: $secondary-color;
+    font-weight: bold;
+    font-size: 40px;
+
+    &--primary {
+        color: $primary-color;
+    }
+}
