@@ -5,6 +5,7 @@
 // Icon Font: Icomoon
 @import './assets/icons/style.css';
 
+@import "./styles/include-media";
 @import "./styles/variable.scss";
 @import "node_modules/normalize-scss/sass/normalize";
 @include normalize();
@@ -17,11 +18,13 @@ h3 {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 body {
   font-family: $primary-font;
   background-color: $primary-bg;
   color: $primary-color;
+  padding: 0 16px;
+  overflow-x: hidden;
 }

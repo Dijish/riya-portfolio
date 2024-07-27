@@ -1,6 +1,85 @@
 @import '../../styles/variable.scss';
+@import '../../styles/include-media';
 
 .hero {
-    // background-color: $primary-bg;
-    // color: $primary-color;
+    max-width: $hero-max-width;
+    margin: 0 auto;
+    height: 100vh;
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        left: 50%;
+        z-index: -1;
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__left {
+        width: 50%;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .label {
+            margin-bottom: 50px;
+            display: block;
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+        }
+
+        li {
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            top: -75%;
+            background-color: $primary-color;
+            left: 40%;
+            transform: rotate(10deg);
+            z-index: -1;
+        }
+
+        @include media('<desktop') {
+            &-content {
+                background-color: $primary-bg;
+            }
+        }
+    }
+
+    &__right {
+        background-color: $secondary-color;
+        width: 50%;
+
+        img {
+            height: 100%;
+            transform: scale(1.5);
+
+            @include media('<desktop') {
+                margin-left: -200px;
+            }
+        }
+    }
+
+    &__ssn {
+        display: flex;
+        gap: 30px;
+    }
 }
