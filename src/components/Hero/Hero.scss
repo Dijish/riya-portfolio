@@ -90,7 +90,6 @@
             z-index: -1;
 
             @include media('<tablet') {
-                // content: none;
                 background-color: rgba($primary-bg, 0.75);
                 left: 0;
                 transform: rotate(75deg);
@@ -148,7 +147,6 @@
             }
 
             @include media('<tablet') {
-                // transform: scale(1);
                 margin-left: -100px;
                 margin-top: -80px;
             }
