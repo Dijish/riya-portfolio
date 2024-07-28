@@ -1,7 +1,13 @@
 @import "../../styles/variable.scss";
+@import '../../styles/include-media';
 
 .subtitle {
     font-weight: bold;
     font-size: 25px;
     color: $tertiary-color;
+
+    @include media('<tablet') {
+        font-size: 12px;
+        color: $primary-color;
+    }
 }

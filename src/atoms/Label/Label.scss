@@ -1,9 +1,15 @@
 @import "../../styles/variable.scss";
+@import '../../styles/include-media';
 
 .label {
     color: $secondary-color;
     font-weight: bold;
     font-size: 40px;
+
+    @include media('<tablet') {
+        font-size: 20px;
+        color: $primary-color;
+    }
 
     &--primary {
         color: $primary-color;

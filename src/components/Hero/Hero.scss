@@ -1,6 +1,176 @@
 @import '../../styles/variable.scss';
+@import '../../styles/include-media';
 
 .hero {
-    // background-color: $primary-bg;
-    // color: $primary-color;
+    max-width: $hero-max-width;
+    margin: 0 auto;
+    height: 100vh;
+
+    @include media('<tablet') {
+        margin-left: -$main-padding;
+        margin-right: -$main-padding;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $primary-color;
+        left: 50%;
+        z-index: -1;
+
+        @include media('<tablet') {
+            content: none;
+        }
+    }
+
+    &__container {
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__left {
+        width: 50%;
+        align-items: flex-start;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .label {
+            margin-bottom: 50px;
+            display: block;
+
+            @include media('<tablet') {
+                margin-bottom: 10px;
+            }
+        }
+
+        .subtitle {
+            margin-bottom: 40px;
+
+            @include media('<tablet') {
+                margin-bottom: 15px;
+            }
+        }
+
+        ul {
+            @include media('<tablet') {
+                display: flex;
+                flex-wrap: wrap;
+            }
+        }
+
+        li {
+            margin-bottom: 20px;
+
+            @include media('<tablet') {
+                margin-bottom: 8px;
+                margin-right: 25px;
+            }
+
+            button {
+                padding: 0;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 200%;
+            top: -75%;
+            background-color: $primary-color;
+            left: 40%;
+            transform: rotate(10deg);
+            z-index: -1;
+
+            @include media('<tablet') {
+                background-color: rgba($primary-bg, 0.75);
+                left: 0;
+                transform: rotate(75deg);
+                top: initial;
+                height: 300%;
+            }
+        }
+
+        @include media('<desktop') {
+            &-content {
+                background-color: $primary-bg;
+            }
+        }
+
+        @include media('<tablet') {
+            width: 100%;
+            position: absolute;
+            z-index: 10;
+            bottom: 0;
+
+            &-content {
+                background-color: initial;
+            }
+        }
+
+        p {
+            @include media('<tablet') {
+                font-size: 12px;
+            }
+        }
+
+        &-content {
+            @include media('<tablet') {
+                width: 100%;
+                margin-left: 0;
+                padding: $main-padding;
+            }
+        }
+    }
+
+    &__right {
+        background-color: $secondary-color;
+        width: 50%;
+
+        @include media('<tablet') {
+            width: 100%;
+        }
+
+        img {
+            height: 100%;
+            transform: scale(1.5);
+
+            @include media('<desktop') {
+                margin-left: -200px;
+            }
+
+            @include media('<tablet') {
+                margin-left: -100px;
+                margin-top: -80px;
+            }
+        }
+    }
+
+    &__ssn {
+        display: flex;
+        gap: 30px;
+        margin-top: 100px;
+
+        @include media('<tablet') {
+            position: absolute;
+            top: 0;
+            margin-top: 10px;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        li {
+            @include media('<tablet') {
+                margin-bottom: 0;
+            }
+        }
+    }
 }
