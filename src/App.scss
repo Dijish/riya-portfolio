@@ -25,6 +25,6 @@ body {
   font-family: $primary-font;
   background-color: $primary-bg;
   color: $primary-color;
-  padding: 0 16px;
+  padding: 0 $main-padding;
   overflow-x: hidden;
 }
