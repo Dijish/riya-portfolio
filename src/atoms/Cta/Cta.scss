@@ -3,8 +3,8 @@
 
 
 .cta {
-    width: max-content;
-    border-bottom: 5px solid transparent;
+  width: max-content;
+  border-bottom: 5px solid transparent;
 
   > a,
   > button {
@@ -13,6 +13,7 @@
     font-size: 30px;
     letter-spacing: 5px;
     cursor: pointer;
+    text-decoration: none;
 
     @include media('<tablet') {
       font-size: 20px;
@@ -26,5 +27,38 @@
   button {
     background: none;
     border: none;
+  }
+
+  &--secondary {
+    border-bottom: 2px solid transparent;
+
+    > a,
+    > button {
+      font-size: 17px;
+      color: $secondary-bg;
+      letter-spacing: normal;
+    }
+
+    &:hover {
+      border-bottom: 2px solid $secondary-bg;
+    }
+  }
+
+  &--tertiary {
+    border-bottom: 0px;
+
+    > a,
+    > button {
+      font-size: 15px;
+      color: $secondary-color;
+      letter-spacing: normal;
+      padding: 10px;
+      background-color: $secondary-bg;
+      border-radius: 20px;
+    }
+
+    &:hover {
+      border-bottom: 0px;
+    }
   }
 }

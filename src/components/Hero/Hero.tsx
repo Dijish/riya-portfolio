@@ -1,13 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import riyaImage from "../../assets/images/riya-2.png";
-import "./Hero.scss";
-import Header from "../Header";
-import Label from "../../atoms/Label/Label";
-import Title from "../../atoms/Title/Title";
-import SubTitle from "../../atoms/SubTitle/SubTitle";
+import riyaImage from "../../assets/images/riya-3.png";
 import Cta from "../../atoms/Cta/Cta";
+import Label from "../../atoms/Label/Label";
 import Ssn from "../../atoms/Ssn/Ssn";
+import SubTitle from "../../atoms/SubTitle/SubTitle";
+import Title from "../../atoms/Title/Title";
+import "./Hero.scss";
 
 const Hero: React.FC = () => {
   const { t, i18n } = useTranslation();
@@ -19,7 +18,6 @@ const Hero: React.FC = () => {
   return (
     <section className="hero">
       <div className="hero__container">
-        {/* <Header /> */}
         <div className="hero__left">
           <div className="hero__left-content">
             <Label text={t("Hi, I am")} styleClass="label--primary" />
