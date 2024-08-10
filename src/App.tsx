@@ -1,16 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import Header from "./components/Header";
-import Hero from "./components/Hero/Hero";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Education from "./components/Education";
-import Certifications from "./components/Certifications";
-import Skills from "./components/Skills";
-import Recommendations from "./components/Recommendations";
-import Contact from "./components/Contact";
+import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
+import About from "./components/About";
+import Certifications from "./components/Certifications";
+import Contact from "./components/Contact";
+import Education from "./components/Education";
+import Experience from "./components/Experience";
+import Header from "./components/Header/Header";
+import Hero from "./components/Hero/Hero";
+import Recommendations from "./components/Recommendations";
+import Skills from "./components/Skills";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -32,8 +32,8 @@ const App: React.FC = () => {
   return (
     <Router>
       <div className="App">
+        <Header />
         <Hero />
-        {/* <Header /> */}
         <About />
         <Experience />
         <Education />

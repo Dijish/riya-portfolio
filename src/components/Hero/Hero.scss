@@ -6,9 +6,12 @@
     margin: 0 auto;
     height: 100vh;
 
+    @include media('<=desktop-md') {
+        margin-right:  -$main-padding;
+    }
+
     @include media('<tablet') {
         margin-left: -$main-padding;
-        margin-right: -$main-padding;
     }
 
     &::before {
@@ -89,16 +92,20 @@
             transform: rotate(10deg);
             z-index: -1;
 
+            @include media('<desktop', '>=tablet') {
+                content: none;
+            }
+
             @include media('<tablet') {
                 background-color: rgba($primary-bg, 0.75);
                 left: 0;
                 transform: rotate(75deg);
                 top: initial;
-                height: 300%;
+                height: 1000%;
             }
         }
 
-        @include media('<desktop') {
+        @include media('<tablet') {
             &-content {
                 background-color: $primary-bg;
             }
@@ -142,7 +149,7 @@
             height: 100%;
             transform: scale(1.5);
 
-            @include media('<desktop') {
+            @include media('<desktop-md') {
                 margin-left: -200px;
             }
 
