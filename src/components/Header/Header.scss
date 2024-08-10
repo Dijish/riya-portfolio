@@ -1,11 +1,64 @@
 @import '../../styles/variable.scss';
+@import '../../styles/include-media';
 
 header {
-    position: fixed;
-    top: 60px;
-    width: 40%;
-    z-index: 10;
-    left: 50%;
+    .header-container {
+        padding: 60px;
+        position: fixed;
+        width: 40vw;
+        z-index: 15;
+        left: 50vw;
+
+        @include media('<desktop-md') {
+            padding: 25px;
+            width: auto;
+            right: 0;
+            left: unset;
+        }
+    }
+
+    @include media('<desktop-md') {
+        &.header--menu-open {
+            .header__menu {
+                display: none;
+            }
+
+            .header__close {
+                display: block;
+            }
+
+            nav {
+                display: block;
+            }
+        }
+    }
+
+    .header {
+        &__menu,
+        &__close {
+            @include media('<desktop-md') {
+                cursor: pointer;
+            }
+            
+            span {
+                font-size: 37px;
+                color: $secondary-bg;
+                float: right;
+            }
+        }
+
+        &__menu {
+            display: none;
+
+            @include media('<desktop-md') {
+                display: block;
+            }
+        }
+
+        &__close {
+            display: none;
+        }
+    }
 
     .container {
         max-width: $hero-max-width;
@@ -15,5 +68,57 @@ header {
     ul {
         display: flex;
         justify-content: space-between;
+
+        @include media('<desktop-md') {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        li {
+            @include media('<desktop-md') {
+                padding: 25px;
+
+                &.header__contact-me {
+                    width: 100%;
+                    background-color: $secondary-bg;
+                    padding: 0;
+
+                    .cta--tertiary {
+                        width: 100%;
+                        text-align: center;
+
+                        a {
+                            width: 100%;
+                            padding: 25px 0;
+                            border-radius: 0;
+                            display: block;
+                        }
+                    }
+                }
+            }
+
+            .cta > a {
+                @include media('<desktop-md') {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+
+    nav {
+        @include media('<desktop-md') {
+            display: none;
+            position: fixed;
+            width: 100vw;
+            left: 0;
+            top: 86px;
+            background-color: rgba($primary-color, 0.4);
+        }
+    }
+}
+
+.is-sticky {
+    .header-container {
+        background-color: $primary-color;
     }
 }
