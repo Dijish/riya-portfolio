@@ -1,0 +1,34 @@
+@import '../../styles/variable.scss';
+@import '../../styles/include-media';
+
+.about-me {
+    max-width: $body-max-width;
+    margin: 0 auto;
+    padding-top: 142px;
+    text-align: center;
+
+    @include media('<tablet') {
+        padding-top: 74px;
+    }
+
+    h2 {
+        margin: 0 auto 71px auto;
+
+        @include media('<tablet') {
+            margin-bottom: 38px;
+        }
+    }
+
+    p {
+        margin-bottom: 67px;
+        line-height: 1.5;
+
+        @include media('<tablet') {
+            margin-bottom: 30px;
+        }
+    }
+
+    .cta {
+        margin: 0 auto;
+    }
+}

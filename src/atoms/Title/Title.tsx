@@ -3,7 +3,7 @@ import "./Title.scss";
 
 interface TitleProps {
   text: string;
-  styleClass?: string;
+  styleClass?: 'title--primary' | 'title--secondary';
 }
 
 const Title: React.FC<TitleProps> = (props: TitleProps) => {
