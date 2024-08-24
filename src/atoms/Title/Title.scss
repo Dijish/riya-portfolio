@@ -14,4 +14,18 @@
     &--primary {
         color: $primary-color;
     }
+
+    &--secondary {
+        font-size: 30px;
+        padding: 34px 50px;
+        border: 8px solid $primary-color;
+        max-width: max-content;
+        text-transform: uppercase;
+        letter-spacing: 10px;
+
+        @include media('<tablet') {
+            font-size: 14px;
+            padding: 18px 40px;
+        }
+    }
 }

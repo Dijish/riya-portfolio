@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
-import About from "./components/About";
+import AboutMe from "./components/AboutMe/AboutMe";
 import Certifications from "./components/Certifications";
 import Contact from "./components/Contact";
 import Education from "./components/Education";
@@ -34,7 +34,7 @@ const App: React.FC = () => {
       <div className="App">
         <Header />
         <Hero />
-        <About />
+        <AboutMe />
         <Experience />
         <Education />
         <Certifications />

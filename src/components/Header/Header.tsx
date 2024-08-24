@@ -41,16 +41,16 @@ const Header: React.FC = () => {
           <nav>
             <ul>
               <li>
-                <Cta label={t("About Me")} href="#about-me" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} />
+                <Cta label={t("About Me")} href="#about-me" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} target="__self" />
               </li>
               <li>
-                <Cta label={t("Skills")} href="#skills" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} />
+                <Cta label={t("Skills")} href="#skills" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} target="__self" />
               </li>
               <li>
-                <Cta label={t("Experiences")} href="#experiences" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} />
+                <Cta label={t("Experiences")} href="#experiences" styleClass="cta--secondary" onClick={() => setIsMenuOpen(false)} target="__self" />
               </li>
               <li className="header__contact-me">
-                <Cta label={t("CONTACT ME")} href="#contact-me" styleClass="cta--tertiary" onClick={() => setIsMenuOpen(false)} />
+                <Cta label={t("CONTACT ME")} href="#contact-me" styleClass="cta--tertiary" onClick={() => setIsMenuOpen(false)} target="__self" />
               </li>
             </ul>
           </nav>

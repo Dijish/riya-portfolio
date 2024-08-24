@@ -14,6 +14,7 @@
     letter-spacing: 5px;
     cursor: pointer;
     text-decoration: none;
+    color: $primary-color;
 
     @include media('<tablet') {
       font-size: 20px;
@@ -27,6 +28,24 @@
   button {
     background: none;
     border: none;
+  }
+
+  &--primary {
+    border-left: 2px solid $primary-color;
+    border-right: 2px solid $primary-color;
+    border-bottom: none;
+    padding: 5px 20px;
+
+    > a,
+    > button {
+      font-size: 15px;
+      font-weight: 500;
+      letter-spacing: initial;
+    }
+
+    &:hover {
+      border-bottom: none;
+    }
   }
 
   &--secondary {
