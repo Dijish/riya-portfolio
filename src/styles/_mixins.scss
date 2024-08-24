@@ -1,0 +1,19 @@
+@import './variable.scss';
+
+@mixin content-spacing {
+    max-width: $body-max-width;
+    margin: 0 auto;
+    padding-top: 142px;
+
+    @include media('<tablet') {
+        padding-top: 74px;
+    }
+}
+
+@mixin title-spacing {
+    margin: 0 auto 71px auto;
+
+    @include media('<tablet') {
+        margin-bottom: 38px;
+    }
+}

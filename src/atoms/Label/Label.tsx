@@ -3,7 +3,7 @@ import "./Label.scss";
 
 interface LabelProps {
   text: string;
-  styleClass?: string;
+  styleClass?: 'label--primary' | 'label--secondary';
 }
 
 const Label: React.FC<LabelProps> = (props: LabelProps) => {

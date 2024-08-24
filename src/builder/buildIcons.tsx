@@ -10,5 +10,11 @@ export const buildIcon = (type: string) => {
       return <span className="icon-menu"></span>;
     case "close":
       return <span className="icon-cross"></span>;
+    case "qa":
+      return <span className="icon-justice"></span>;
+    case "bilingual":
+      return <span className="icon-language"></span>;
+    case "PO":
+      return <span className="icon-files-empty"></span>;
   }
 };
