@@ -1,10 +1,9 @@
-
 @import '../../styles/include-media';
 
 .divider {
-    margin: 85px 0;
+    margin: 85px 0 0;
 
     @include media('<tablet') {
-        margin: 65px 0;
+        margin: 65px 0 0;
     }
 }

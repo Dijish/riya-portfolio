@@ -10,7 +10,7 @@ import Experience from "./components/Experience";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
 import Recommendations from "./components/Recommendations";
-import Skills from "./components/Skills";
+import Skills from "./components/Skills/Skills";
 
 const App: React.FC = () => {
   const { i18n } = useTranslation();
@@ -35,10 +35,10 @@ const App: React.FC = () => {
         <Header />
         <Hero />
         <AboutMe />
+        <Skills />
         <Experience />
         <Education />
         <Certifications />
-        <Skills />
         <Recommendations />
         <Contact />
       </div>

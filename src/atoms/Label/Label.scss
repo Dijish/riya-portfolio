@@ -14,4 +14,12 @@
     &--primary {
         color: $primary-color;
     }
+
+    &--secondary {
+        font-size: 22px;
+
+        @include media('<tablet') {
+            font-size: 17px;
+        }
+    }
 }
