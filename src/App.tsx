@@ -3,13 +3,11 @@ import { useTranslation } from "react-i18next";
 import { BrowserRouter as Router } from "react-router-dom";
 import "./App.scss";
 import AboutMe from "./components/AboutMe/AboutMe";
-import Certifications from "./components/Certifications";
-import Contact from "./components/Contact";
-import Education from "./components/Education";
-import Experience from "./components/Experience";
+import ContactMe from "./components/ContactMe/ContactMe";
+import Experiences from "./components/Experiences/Experiences";
+import Footer from "./components/Footer/Footer";
 import Header from "./components/Header/Header";
 import Hero from "./components/Hero/Hero";
-import Recommendations from "./components/Recommendations";
 import Skills from "./components/Skills/Skills";
 
 const App: React.FC = () => {
@@ -36,11 +34,9 @@ const App: React.FC = () => {
         <Hero />
         <AboutMe />
         <Skills />
-        <Experience />
-        <Education />
-        <Certifications />
-        <Recommendations />
-        <Contact />
+        <Experiences />
+        <ContactMe />
+        <Footer />
       </div>
     </Router>
   );

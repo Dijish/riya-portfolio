@@ -1,0 +1,36 @@
+@import '../../styles/variable.scss';
+
+.experience {
+    display: flex;
+    gap: 20px;
+
+    &__content {
+        text-align: left;
+
+        h3 {
+            margin-bottom: 5px;
+        }
+
+        h4 {
+            margin: 0;
+            margin-bottom: 15px;
+        }
+
+        p {
+            margin: 0;
+            margin-bottom: 5px;
+        }
+
+        button {
+            cursor: pointer;
+            font-size: 12px;
+            background: none;
+            border: none;
+            color: $tertiary-color;
+        }
+    }
+
+    p.experience__description {
+        margin-top: 20px;
+    }
+}

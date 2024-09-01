@@ -23,4 +23,10 @@
     span {
         font-size: 28px;
     }
+
+    &--secondary {
+        background-color: initial;
+        color: $secondary-bg;
+        filter: none;
+    }
 }

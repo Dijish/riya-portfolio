@@ -16,5 +16,7 @@ export const buildIcon = (type: string) => {
       return <span className="icon-language"></span>;
     case "PO":
       return <span className="icon-files-empty"></span>;
+    case "go-up":
+      return <span className="icon-chevrons-up"></span>;
   }
 };
