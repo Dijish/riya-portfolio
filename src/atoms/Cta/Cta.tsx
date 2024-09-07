@@ -6,12 +6,12 @@ interface CtaProps {
   styleClass?: 'cta--primary' | 'cta--secondary' | 'cta--tertiary';
   href?: string;
   onClick?: () => void;
-  target?: '__blank' | '__self';
+  target?: '_blank' | '_self';
 }
 
 const Cta: React.FC<CtaProps> = (props: CtaProps) => {
   const Tag = props.href ? "a" : "button";
-  const Target = props.target ? props.target : "__blank";
+  const Target = props.target ? props.target : "_blank";
 
   return (
     <div className={props.styleClass ? `cta ${props.styleClass}` : "cta"}>

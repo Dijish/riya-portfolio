@@ -13,7 +13,7 @@ const Footer: React.FC = () => {
             <div className="container">
                 <div className="footer__back-to-top">
                     {buildIcon('go-up')}
-                    <Cta label={t("BACK TO TOP")} styleClass="cta--secondary" href="#hero" target="__self" />
+                    <Cta label={t("BACK TO TOP")} styleClass="cta--secondary" href="#hero" target="_self" />
                 </div>
                 <ul className="footer__ssn">
                     <li>
