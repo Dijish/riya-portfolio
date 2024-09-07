@@ -1,12 +1,15 @@
-import react from '@vitejs/plugin-react'
-import { defineConfig } from 'vite'
+// vite.config.js
+import react from '@vitejs/plugin-react';
+import { defineConfig } from 'vite';
 
-// https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist',
-    assetsDir: 'riya-portfolio/assets'
-  },
-  base: './',
-})
+  plugins: [
+    react(),
+    {
+      name: 'html-transform',
+      transformIndexHtml(html) {
+        return html.replace(/\/?assets\//g, 'riya-portfolio/assets/');
+      }
+    }
+  ],
+});
